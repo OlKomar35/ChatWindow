@@ -1,0 +1,6 @@
+.text {
+    -fx-background-image: url(background.jpg);
+}
+.text-area {
+    -fx-background-image: url(oboi.jpg);
+}

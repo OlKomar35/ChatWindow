@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER"  styleClass="text" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatwindow.HelloController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <HBox fx:id="texPanel" managed="true" visible="true" VBox.vgrow="ALWAYS">
+        <children>
+
+            <TextArea fx:id="welcomeText"  styleClass="text-area" stylesheets="@style.css" editable="false" prefHeight="444.0" prefWidth="313.0" promptText="Welcome our chat! Для авторизвции введите /auth login pass" wrapText="true" HBox.hgrow="ALWAYS">
+                <font>
+                    <Font name="Cambria" size="14.0" />
+                </font>
+            </TextArea>
+            <TextArea fx:id="listClients"  styleClass="text-area" stylesheets="@style.css" editable="false" prefHeight="444.0" prefWidth="200.0" promptText="В сети никого нет" wrapText="true" HBox.hgrow="ALWAYS">
+                <font>
+                    <Font name="Cambria" size="14.0" />
+                </font>
+            </TextArea>
+
+        </children>
+    </HBox>
+
+    <HBox fx:id="msgPanel" managed="true" visible="true">
+        <children>
+            <TextField fx:id="textUser" onAction="#sendMsg" prefHeight="36.0" prefWidth="378.0" promptText="Type something to send...">
+                <font>
+                    <Font name="Cambria" size="14.0" />
+                </font>
+                <opaqueInsets>
+                    <Insets left="20.0" />
+                </opaqueInsets>
+            </TextField>
+            <Button contentDisplay="CENTER" minWidth="36.0" onAction="#sendMsg" prefHeight="36.0" prefWidth="59.0" text="Send" textFill="#0a0000">
+                <font>
+                    <Font name="Cambria Bold" size="14.0" />
+                </font>
+            </Button>
+        </children>
+    </HBox>
+</VBox>
